@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class IntroToLamdas {
+public class O1IntroToLamdas {
 
     public static void main(String[] args) {
         List<Noe> listeMedNoe = Arrays.asList(new Noe("A"), new Noe("C"), new Noe("B"));

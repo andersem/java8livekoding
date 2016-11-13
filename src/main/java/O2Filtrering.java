@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class Filtrering {
+public class O2Filtrering {
 
     public static void main(String[] args) {
         List<String> liste = Arrays.asList(

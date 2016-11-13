@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class Husprismapping {
+public class O3Husprismapping {
     public static void main(String[] args) {
         List<Integer> tall = Arrays.asList(
                 3_200_000, 2_900_000, 3_500_500, 4_000_000, 5_100_500);
@@ -10,8 +10,7 @@ public class Husprismapping {
         // Gitt en liste med priser på leiligheter i 2015, finn gjennomsnittsprisen
         // i 2016
 
-
-
+        // Finn deretter maks
 
     }
 }
