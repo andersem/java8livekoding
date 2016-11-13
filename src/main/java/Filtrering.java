@@ -9,6 +9,7 @@ public class Filtrering {
                 "b1", "b2", "b3",
                 "c1", "c2", "c3", "c4", "c4", "c11");
 
+        // **Predicate**
         // Finn alle strenger i lista som begynner med a
         // Finn alle strenger i lista som er nr 1 for den bokstaven
         // Finn første streng som inneholder 3
