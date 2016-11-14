@@ -17,21 +17,16 @@ public class O4SkattekortsoeknadBehandler {
                 );
 
         // Gjør alle DTOene om til interne objekter.
-        // Filtrer ut
 
-        List<Skattekortsoeknad> soeknader = skattekortsoeknadDTOer.stream()
-                .map(soeknadDTO -> new Skattekortsoeknad(
-                        soeknadDTO.norskIdentifikator,
-                        soeknadDTO.inntektTotalt,
+        skattekortsoeknadDTOer.stream()
+                .map(soeknad -> new Skattekortsoeknad(
+                        soeknad.norskIdentifikator,
+                        soeknad.inntektTotalt,
                         new Skattekortsoeknad.HittilIAar(
-                                soeknadDTO.inntektHittil,
-                                soeknadDTO.betaltSkatt)))
+                                soeknad.inntektHittil, soeknad.betaltSkatt))
+                )
                 .collect(Collectors.toList());
 
-        soeknader.stream()
-                .filter(soeknad ->
-                        (soeknad.inntektTotalt - soeknad.hittilIAar.inntektHittil) / soeknad.inntektTotalt > 0.6)
-                .forEach(soeknad -> System.out.println("Sender til manuell behandling: " + soeknad));
     }
 }
 

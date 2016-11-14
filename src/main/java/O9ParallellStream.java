@@ -9,7 +9,7 @@ public class O9ParallellStream {
 
         // Bruk parallellStream til å forbedre ytelsen
 
-        System.out.println(tall.stream()
+        System.out.println(tall.parallelStream()
                 .map(t -> {
                     try {
                         Thread.sleep(1000);

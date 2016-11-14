@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,10 +11,12 @@ public class O8Flatmap {
                 new Utvikler("Zuckerberg", Arrays.asList("PHP", "JavaScript")),
                 new Utvikler("Gates", Arrays.asList("BASIC", "C"))
         );
-
         // Få en liste over alle språkene folk i bedriften kan
-
-
+        System.out.println(utviklere.stream()
+                .map(utvikler -> utvikler.spraak)
+                .flatMap(Collection::stream)
+                .distinct()
+                .collect(Collectors.toList()));
     }
 
     static class Utvikler {
